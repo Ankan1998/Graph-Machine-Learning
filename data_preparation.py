@@ -1,6 +1,11 @@
 from torch_geometric.datasets import KarateClub
+from torch_geometric.utils import to_networkx
 
-def GNNdataset(stat=True):
+from visualizer import visualize
+
+
+def GNNdataset(stat=True, viz=True):
+
     dataset = KarateClub()
     data = dataset[0]
     if stat:
@@ -15,5 +20,10 @@ def GNNdataset(stat=True):
         print(f'Contains isolated nodes: {data.contains_isolated_nodes()}')
         print(f'Contains self-loops: {data.contains_self_loops()}')
         print(f'Is undirected: {data.is_undirected()}')
+    if viz:
+        G = to_networkx(data, to_undirected=True)
+        visualize(G, color=data.y)
+
     return data
+
 
