@@ -10,7 +10,6 @@ def visualize(h, color, epoch=None, loss=None):
     plt.yticks([])
 
     if torch.is_tensor(h):
-        print("yo")
         h = h.detach().cpu().numpy()
         plt.scatter(h[:, 0], h[:, 1], s=140, c=color, cmap="Set2")
         if epoch is not None and loss is not None:
