@@ -4,5 +4,10 @@ This repo is created for Graph ML.
 
 
 ### TODO
-* [ ] Graph Neural Network
+* [x] Karate Network Dataset Preparation
+* [x] Visualizer with Networkx
+* [x] GCN Model 
+* [x] Training
+* [x] Main Script
+* [ ] Inference
 
