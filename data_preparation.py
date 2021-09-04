@@ -4,7 +4,7 @@ from torch_geometric.utils import to_networkx
 from visualizer import visualize
 
 
-def GNNdataset(stat=True, viz=True):
+def GNNdataset(stat=False, viz=False):
 
     dataset = KarateClub()
     data = dataset[0]
@@ -24,7 +24,7 @@ def GNNdataset(stat=True, viz=True):
         G = to_networkx(data, to_undirected=True)
         visualize(G, color=data.y)
 
-    return data
+    return data, dataset.num_features, dataset.num_classes
 
 if __name__=="__main__":
     GNNdataset()
