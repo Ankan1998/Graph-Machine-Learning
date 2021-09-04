@@ -1,5 +1,7 @@
 # <p align="center"> Graph Convolutional Network </p>
 
+![gcn](https://user-images.githubusercontent.com/36896102/132102072-5c366739-e82d-4f55-a9c6-a7e9f34c93cc.PNG)
+
 Graph Data Representation Learning is not a new concept. Traditional
 methods like graphlets, hand-engineered graph feature extraction then 
 applying different prediction task on those feature was there. Then there is Deepwalk and
