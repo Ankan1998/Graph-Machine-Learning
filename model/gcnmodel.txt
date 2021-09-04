@@ -1,0 +1,6 @@
+GCNModel(
+  (conv_1): GCNConv(34, 4)
+  (conv_2): GCNConv(4, 4)
+  (conv_3): GCNConv(4, 2)
+  (classifier): Linear(in_features=2, out_features=4, bias=True)
+)
